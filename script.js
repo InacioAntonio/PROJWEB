@@ -10,7 +10,7 @@ window.onload = function () {
         return user.Email === username && user.Password === password;
       });
       if (userExists) {
-        window.location.href = "index.html";
+        window.location.href = "assitente.html";
       } else {
         alert("Nome de usuário ou senha incorretos");
       }

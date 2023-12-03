@@ -132,7 +132,7 @@ if (typeof Storage != "undefine") {
       var users = JSON.parse(localStorage.getItem("users") || "[]");
       if (password.value === clone_passoword.value) {
         var userExists = users.some(function (user) {
-          return user.email === email;
+          return user.Email === email;
         });
         if (userExists) {
           MsgErro.setAttribute("style", "display:block");

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Dados</title>
+  </head>
+  <body>
+    <header>Editar o Seu Cadastro</header>
+    <section>
+      <form id="Edicao">
+        <div>
+          <label for="Nome" id="Label_nome">Nome :</label>
+          <input type="text" id="Nome" placeholder="Nome" />
+        </div>
+        <div>
+          <label for="E-mail" id="label_email">Email :</label>
+          <input type="email" id="Email" placeholder="E-mail" />
+        </div>
+        <div>
+          <label for="E-mail" id="label_email_novo"> Novo Email :</label>
+          <input type="email" id="Email_Novo" placeholder="Novo E-mail" />
+        </div>
+        <div>
+          <label for="Cidade" id="label_cidade">Cidade :</label>
+          <input type="text" id="Cidade" placeholder="Cidade" />
+        </div>
+        <div>
+          <label for="Estado" id="Label_Estado">Estado : </label>
+          <input type="text" id="Estado" placeholder="Estado" />
+        </div>
+        <div>
+          <label for="Senha" id="label_senha">Senha : </label>
+          <input type="password" id="Senha" placeholder="Senha" />
+        </div>
+        <div>
+          <label for="Senha" id="label_repetir_senha">Repetir-Senha : </label>
+          <input
+            type="password"
+            id="Repetir-Senha"
+            placeholder="Repetir-Senha"
+          />
+        </div>
+        <div>
+          <label for="Senha" id="label_senhaNova">Digite a Senha Nova: </label>
+          <input type="password" id="SenhaNova" placeholder="Senha-Nova" />
+        </div>
+        <div>
+          <button type="button" value="Editar" id="BtnE">
+            Editar e Salvar
+          </button>
+        </div>
+        <div>
+          <button type="button" value="Apagar" id="BtnD">Apagar Conta</button>
+        </div>
+      </form>
+    </section>
+    <script src="UpdateDelete.js"></script>
+  </body>
+</html>

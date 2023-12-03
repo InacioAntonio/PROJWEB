@@ -289,8 +289,12 @@ btnEditar.addEventListener("click", () => {
 });
 btnApagar.addEventListener("click", () => {
   let email = document.getElementById("Email").value;
-  openModal(`Deseja Apagar Conta ${email} ? `);
-  document.querySelector("#sim").addEventListener("click", () => {
+  let senha = document.getElementById("Senha").value;
+  document.getElementById("popup").style.display = "block";
+  document.getElementById(
+    "MSG"
+  ).innerHTML = `Deseja Realmente apagar sua Conta ${email} ?`;
+  document.getElementById("sim").addEventListener("click", () => {
     var users1 = JSON.parse(localStorage.getItem("users") || "[]");
     var userExists = users1.some(function (users) {
       return users.Email === email;
@@ -304,13 +308,21 @@ btnApagar.addEventListener("click", () => {
         }
       }
       if (indiceParaExcluir !== -1) {
-        users1.splice(indiceParaExcluir, 1);
-        localStorage.setItem("users", JSON.stringify(users1));
-        console.log("Usuario removido com sucesso.");
-        alert("Usuario removido com Sucesso.");
+        if (users1[i].Password === senha) {
+          users1.splice(indiceParaExcluir, 1);
+          localStorage.setItem("users", JSON.stringify(users1));
+          console.log("Usuario removido com sucesso.");
+          alert("Usuario removido com Sucesso.");
+        } else {
+          alert("Senha Incorreta");
+        }
       } else {
         console.log("Usuario não encontrado.");
       }
     }
+    document.getElementById("popup").style.display = "none";
   });
+  function FecharMsg() {
+    document.getElementById("popup").style.display = "none";
+  }
 });

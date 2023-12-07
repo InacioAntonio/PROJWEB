@@ -313,23 +313,17 @@ btnApagar.addEventListener("click", () => {
           localStorage.setItem("users", JSON.stringify(users1));
           console.log("Usuario removido com sucesso.");
           alert("Usuario removido com Sucesso.");
-          document.getElementById("popup").style.display = "none";
-          window.location.href = "index.html";
         } else {
           alert("Senha Incorreta");
-          document.getElementById("popup").style.display = "none";
         }
       } else {
         console.log("Usuario não encontrado.");
-        alert("Usuario não Encontrado");
-        document.getElementById("popup").style.display = "none";
       }
-    } else {
-      alert("Usuario não Encontrado");
-      document.getElementById("popup").style.display = "none";
     }
+    document.getElementById("popup").style.display = "none";
   });
 });
+
 function FecharMsg() {
   document.getElementById("popup").style.display = "none";
 }
